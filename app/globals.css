@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Aura color is swapped at runtime per tier (see setAuraTheme). */
+    --aura-rgb: 167 139 255;
+    --aura-rgb-2: 74 32 180;
+    --vh: 1dvh;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    background-color: #050509;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-bg text-white antialiased;
+    /* The experience is a fixed viewport app, not a scrolling document. */
+    overscroll-behavior-y: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* iOS safe areas: the camera view and CTAs must clear the notch/home bar. */
+  .safe-top {
+    padding-top: max(env(safe-area-inset-top), 0.75rem);
+  }
+  .safe-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 0.75rem);
+  }
+  .min-h-screen-dvh {
+    min-height: 100dvh;
+  }
+  .h-screen-dvh {
+    height: 100dvh;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--aura-rgb));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgb(var(--aura-rgb) / 0.35);
+  }
+}
+
+@layer components {
+  /* ------------------------------------------------------------------ */
+  /* HUD primitives                                                      */
+  /* ------------------------------------------------------------------ */
+
+  .hud-label {
+    @apply font-mono text-[10px] uppercase tracking-[0.28em] text-muted;
+  }
+
+  .hud-panel {
+    @apply relative rounded-2xl border border-line bg-surface/70 backdrop-blur-md;
+  }
+
+  /* Thin corner brackets, drawn with gradients so there is no extra markup. */
+  .hud-corners::before,
+  .hud-corners::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-color: rgb(var(--aura-rgb) / 0.8);
+    pointer-events: none;
+  }
+  .hud-corners::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-top-left-radius: 6px;
+  }
+  .hud-corners::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-bottom-right-radius: 6px;
+  }
+
+  .aura-text {
+    color: rgb(var(--aura-rgb));
+    text-shadow:
+      0 0 18px rgb(var(--aura-rgb) / 0.55),
+      0 0 60px rgb(var(--aura-rgb) / 0.25);
+  }
+
+  .aura-gradient-text {
+    background-image: linear-gradient(
+      180deg,
+      #fff 0%,
+      rgb(var(--aura-rgb)) 55%,
+      rgb(var(--aura-rgb-2)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Primary CTA. Deliberately circular-adjacent: a pill with an energy ring. */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-8 py-4;
+    @apply font-display text-sm font-bold uppercase tracking-[0.18em] text-black;
+    @apply transition-transform duration-200 will-change-transform;
+    background: linear-gradient(135deg, #fff, rgb(var(--aura-rgb)));
+    box-shadow:
+      0 0 0 1px rgb(var(--aura-rgb) / 0.5),
+      0 0 40px -6px rgb(var(--aura-rgb) / 0.75);
+    min-height: 52px;
+  }
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3;
+    @apply font-mono text-[11px] uppercase tracking-[0.2em] text-muted;
+    @apply transition-colors duration-200 hover:border-white/25 hover:text-white;
+    min-height: 44px;
+  }
+
+  /* Scanline film over the camera feed. */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    mix-blend-mode: overlay;
+  }
+
+  .vignette::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 45%, rgba(5, 5, 9, 0.85) 100%);
+  }
+
+  /* Chromatic split used on high-tier reveals and glitch states. */
+  .chromatic {
+    text-shadow:
+      1.5px 0 0 rgba(255, 0, 90, 0.75),
+      -1.5px 0 0 rgba(0, 220, 255, 0.75);
+  }
+
+  .grid-floor {
+    background-image:
+      linear-gradient(rgb(var(--aura-rgb) / 0.09) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--aura-rgb) / 0.09) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at 50% 40%, black 10%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 40%, black 10%, transparent 70%);
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Reduced motion                                                      */
+/* ------------------------------------------------------------------ */
+/* Flashing, shaking and fast strobing are the exact things this app is
+   built out of, so honouring the preference is not optional. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scanlines::after {
+    display: none;
+  }
+}

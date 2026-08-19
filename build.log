@@ -1,0 +1,61 @@
+
+> aura-scanner@1.0.0 prebuild
+> node scripts/generate-icons.mjs
+
+icons: wrote public/icons/icon-192.png (33660 bytes)
+icons: wrote public/icons/icon-512.png (179700 bytes)
+icons: wrote public/icons/icon-maskable-512.png (131515 bytes)
+icons: wrote public/apple-touch-icon.png (29176 bytes)
+icons: wrote public/og-fallback.png (210895 bytes)
+
+> aura-scanner@1.0.0 build
+> next build
+
+   ▲ Next.js 15.1.6
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/9) ...
+   Generating static pages (2/9) 
+   Generating static pages (4/9) 
+   Generating static pages (6/9) 
+ ✓ Generating static pages (9/9)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    2.87 kB         159 kB
+├ ○ /_not-found                          159 B           106 kB
+├ ƒ /api/leaderboard                     159 B           106 kB
+├ ƒ /api/mercado-pago/webhook            159 B           106 kB
+├ ƒ /api/payments/[id]                   159 B           106 kB
+├ ƒ /api/payments/mock-approve           159 B           106 kB
+├ ƒ /api/payments/reroll                 159 B           106 kB
+├ ƒ /api/scan                            159 B           106 kB
+├ ƒ /api/scan/[id]                       159 B           106 kB
+├ ƒ /api/session                         159 B           106 kB
+├ ƒ /api/session/nickname                159 B           106 kB
+├ ƒ /challenge/[id]                      4.17 kB         160 kB
+├ ƒ /leaderboard                         65.6 kB         222 kB
+├ ○ /legal                               173 B           109 kB
+├ ○ /manifest.webmanifest                0 B                0 B
+├ ƒ /opengraph-image                     0 B                0 B
+├ ƒ /reroll/mock                         2.56 kB         115 kB
+├ ƒ /reroll/return                       2.54 kB         159 kB
+├ ƒ /result/[id]                         301 B           171 kB
+├ ƒ /result/[id]/opengraph-image         0 B                0 B
+├ ○ /robots.txt                          0 B                0 B
+├ ƒ /scan                                6.29 kB         177 kB
+└ ○ /sitemap.xml                         0 B                0 B
++ First Load JS shared by all            105 kB
+  ├ chunks/4bd1b696-927b5d87d2664d33.js  52.9 kB
+  ├ chunks/517-8567fe277c638d96.js       50.5 kB
+  └ other shared chunks (total)          2.03 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+EXIT=0

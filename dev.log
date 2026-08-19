@@ -1,0 +1,217 @@
+   ▲ Next.js 15.1.6
+   - Local:        http://localhost:3100
+   - Network:      http://192.168.0.109:3100
+
+ ✓ Starting...
+ ✓ Ready in 9.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 32.1s (1405 modules)
+ GET / 200 in 33929ms
+ ○ Compiling /api/scan ...
+ ✓ Compiled /api/scan in 8.9s (1476 modules)
+ POST /api/scan 200 in 9964ms
+ POST /api/scan 200 in 264ms
+ ○ Compiling /api/scan/[id] ...
+ ✓ Compiled /api/scan/[id] in 1446ms (1464 modules)
+ GET /api/scan/a32ac9e0-0243-4a96-927a-90694f60ed93 200 in 4655ms
+ ○ Compiling /result/[id] ...
+ ✓ Compiled /result/[id] in 3.6s (1534 modules)
+ GET /result/a32ac9e0-0243-4a96-927a-90694f60ed93 200 in 8443ms
+ ○ Compiling /challenge/[id] ...
+ ✓ Compiled /challenge/[id] in 2.5s (1541 modules)
+ GET /challenge/a32ac9e0-0243-4a96-927a-90694f60ed93 200 in 7800ms
+ ○ Compiling /api/leaderboard ...
+ ✓ Compiled /api/leaderboard in 1272ms (1543 modules)
+ GET /api/leaderboard 200 in 1558ms
+ ○ Compiling /api/payments/reroll ...
+ ✓ Compiled /api/payments/reroll in 1135ms (1546 modules)
+ POST /api/payments/reroll 200 in 1363ms
+ ○ Compiling /api/payments/[id] ...
+ ✓ Compiled /api/payments/[id] in 951ms (1548 modules)
+ GET /api/payments/08a33c83-751c-4571-98d9-8baee74f6c05 200 in 3167ms
+ ○ Compiling /api/payments/mock-approve ...
+ ✓ Compiled /api/payments/mock-approve in 1117ms (1550 modules)
+ POST /api/payments/mock-approve 200 in 1279ms
+ GET /api/payments/08a33c83-751c-4571-98d9-8baee74f6c05 200 in 63ms
+ POST /api/scan 200 in 130ms
+ GET / 200 in 608ms
+ POST /api/scan 402 in 50ms
+ ○ Compiling /manifest.webmanifest ...
+ ✓ Compiled /manifest.webmanifest in 4.8s (1556 modules)
+ GET /manifest.webmanifest 200 in 5151ms
+ POST /api/session/nickname 200 in 5877ms
+ POST /api/session/nickname 400 in 35ms
+ POST /api/scan 200 in 147ms
+ ○ Compiling /scan ...
+ ✓ Compiled /scan in 11.1s (1580 modules)
+ POST /api/scan 200 in 11251ms
+ GET /scan 200 in 12103ms
+ GET /manifest.webmanifest 200 in 75ms
+ POST /api/scan 200 in 45ms
+ POST /api/scan 200 in 44ms
+ POST /api/scan 200 in 38ms
+ POST /api/scan 200 in 45ms
+ POST /api/scan 200 in 40ms
+ POST /api/scan 200 in 32ms
+ POST /api/scan 429 in 41ms
+ POST /api/scan 429 in 33ms
+ POST /api/scan 429 in 23ms
+ GET /scan 200 in 377ms
+ GET /manifest.webmanifest 200 in 130ms
+ ○ Compiling /opengraph-image ...
+ ✓ Compiled /opengraph-image in 724ms (853 modules)
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [TypeError: Invalid URL] {
+    code: 'ERR_INVALID_URL',
+    input: '.\\file:\\C:\\Users\\emkod\\Documents\\GitHub\\Aura%20Detector\\node_modules\\next\\dist\\compiled\\@vercel\\og\\noto-sans-v27-latin-regular.ttf'
+  }
+}
+ ⨯ [Error: failed to pipe response] {
+  [cause]: [TypeError: Invalid URL] {
+    code: 'ERR_INVALID_URL',
+    input: '.\\file:\\C:\\Users\\emkod\\Documents\\GitHub\\Aura%20Detector\\node_modules\\next\\dist\\compiled\\@vercel\\og\\noto-sans-v27-latin-regular.ttf'
+  }
+}
+ GET /opengraph-image 500 in 1765ms
+ ○ Compiling /api/mercado-pago/webhook ...
+ ✓ Compiled /api/mercado-pago/webhook in 1250ms (1554 modules)
+ GET /api/mercado-pago/webhook 200 in 1548ms
+ POST /api/mercado-pago/webhook 200 in 32ms
+ GET / 200 in 3076ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 2268ms
+ ✓ Compiled in 15.2s (1562 modules)
+[aura:og:landing] falling back to static card — Invalid URL
+ GET /opengraph-image 307 in 1582ms
+ GET /manifest.webmanifest 200 in 10024ms
+ GET / 200 in 292ms
+ GET /manifest.webmanifest 200 in 66ms
+ ○ Compiling /leaderboard ...
+ ✓ Compiled /leaderboard in 5.3s (1641 modules)
+[aura:og:landing] falling back to static card — Invalid URL
+ GET /opengraph-image 307 in 2215ms
+ GET /leaderboard 200 in 7813ms
+ GET /scan 200 in 2999ms
+ ○ Compiling /api/leaderboard ...
+ ✓ Compiled /api/leaderboard in 875ms (885 modules)
+ GET /api/leaderboard 200 in 2153ms
+ GET /leaderboard 200 in 2162ms
+ GET /scan 200 in 2294ms
+ GET /leaderboard 200 in 512ms
+ GET /leaderboard 200 in 82ms
+ ○ Compiling /result/[id]/opengraph-image ...
+ ✓ Compiled /result/[id]/opengraph-image in 1320ms (898 modules)
+ GET /manifest.webmanifest 200 in 2428ms
+[aura:og:result] falling back to static card — Invalid URL
+ GET /result/83d65ef9-05ad-40e8-8366-1cbe71f1fce8/opengraph-image 307 in 7396ms
+[aura:og:landing] falling back to static card — Invalid URL
+ GET /opengraph-image 307 in 32ms
+ GET /manifest.webmanifest 200 in 17ms
+ GET / 200 in 479ms
+ GET /manifest.webmanifest 200 in 228ms
+ GET /leaderboard 200 in 144ms
+ GET /leaderboard 200 in 71ms
+ GET /manifest.webmanifest 200 in 27ms
+ ○ Compiling /result/[id] ...
+ ✓ Compiled /result/[id] in 1021ms (919 modules)
+ GET /result/83d65ef9-05ad-40e8-8366-1cbe71f1fce8 200 in 1647ms
+ GET /result/83d65ef9-05ad-40e8-8366-1cbe71f1fce8 200 in 86ms
+ ○ Compiling /api/session ...
+ ✓ Compiled /api/session in 2.8s (1665 modules)
+ GET /api/session 200 in 3002ms
+ GET /api/session 200 in 2965ms
+ GET /manifest.webmanifest 200 in 2952ms
+ GET /scan 200 in 182ms
+ GET /manifest.webmanifest 200 in 59ms
+ GET /scan 200 in 1191ms
+ GET /manifest.webmanifest 200 in 184ms
+ GET /scan 200 in 668ms
+ GET /manifest.webmanifest 200 in 147ms
+ ○ Compiling /api/scan ...
+ ✓ Compiled /api/scan in 2.5s (914 modules)
+ POST /api/scan 200 in 2920ms
+ ○ Compiling /api/session ...
+ ✓ Compiled /api/session in 862ms (916 modules)
+ GET /api/session 200 in 1068ms
+ GET /api/session 200 in 1100ms
+ POST /api/scan 200 in 505ms
+ GET /api/session 200 in 40ms
+ GET /api/session 200 in 43ms
+ GET /manifest.webmanifest 200 in 55ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 4.4s (1675 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 5291ms
+ GET /scan 200 in 2097ms
+ ✓ Compiled in 2.2s (758 modules)
+ GET /scan 200 in 106ms
+ GET /manifest.webmanifest 200 in 165ms
+ POST /api/scan 200 in 262ms
+ GET /api/session 200 in 44ms
+ GET /api/session 200 in 29ms
+ GET / 200 in 193ms
+ GET /leaderboard 200 in 41ms
+ GET /manifest.webmanifest 200 in 8ms
+ GET /scan 200 in 18ms
+ GET /scan 200 in 165ms
+ ○ Compiling /legal ...
+ ✓ Compiled /legal in 5.6s (1658 modules)
+ GET /legal 200 in 7252ms
+ GET /scan 200 in 2230ms
+ ✓ Compiled in 2.4s (758 modules)
+ GET /legal 200 in 475ms
+ GET /scan 200 in 255ms
+ GET /legal 200 in 154ms
+ GET /manifest.webmanifest 200 in 124ms
+ GET /scan 200 in 34ms
+ ✓ Compiled in 3s (1644 modules)
+ GET / 200 in 1107ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1618ms (903 modules)
+ GET /manifest.webmanifest 200 in 2469ms
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 3415ms
+ GET /scan 200 in 134ms
+ GET /manifest.webmanifest 200 in 48ms
+ ○ Compiling /api/scan ...
+ ✓ Compiled /api/scan in 5.7s (917 modules)
+ POST /api/scan 200 in 6600ms
+ ○ Compiling /api/session ...
+ ✓ Compiled /api/session in 2.6s (919 modules)
+ GET /api/session 200 in 2967ms
+ GET /api/session 200 in 3019ms
+ ○ Compiling /api/payments/reroll ...
+ ✓ Compiled /api/payments/reroll in 1251ms (922 modules)
+ POST /api/payments/reroll 200 in 1492ms
+ ○ Compiling /reroll/mock ...
+ ✓ Compiled /reroll/mock in 5.4s (1688 modules)
+ GET /scan 200 in 2907ms
+ GET /reroll/mock?payment=f54e9803-9d45-4267-82a4-4aee02390be4&return=%2Fscan 200 in 9630ms
+ ✓ Compiled in 5s (760 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 1957ms
+ GET /manifest.webmanifest 200 in 1837ms
+ ○ Compiling /api/payments/mock-approve ...
+ ✓ Compiled /api/payments/mock-approve in 1718ms (930 modules)
+ POST /api/payments/mock-approve 200 in 1958ms
+ ○ Compiling /reroll/return ...
+ ✓ Compiled /reroll/return in 1977ms (1684 modules)
+ GET /reroll/return?payment=f54e9803-9d45-4267-82a4-4aee02390be4&return=%2Fscan 200 in 2280ms
+ ○ Compiling /api/payments/[id] ...
+ ✓ Compiled /api/payments/[id] in 2.2s (938 modules)
+ GET /manifest.webmanifest 200 in 3850ms
+ GET /api/payments/f54e9803-9d45-4267-82a4-4aee02390be4 200 in 3873ms
+ GET /api/payments/f54e9803-9d45-4267-82a4-4aee02390be4 200 in 3857ms
+ ⨯ Failed to generate static paths for /api/payments/[id]:
+[Error: Jest worker encountered 2 child process exceptions, exceeding retry limit] {
+  type: 'WorkerError'
+}
+ ⨯ Failed to generate static paths for /api/payments/[id]:
+[Error: Jest worker encountered 2 child process exceptions, exceeding retry limit] {
+  type: 'WorkerError'
+}
+ GET /scan 200 in 344ms
+ GET /manifest.webmanifest 200 in 42ms
+ POST /api/scan 200 in 267ms
+ GET /api/session 200 in 67ms
+ GET /api/session 200 in 68ms
+ ✓ Compiled in 2.7s (1692 modules)
+ GET /scan 200 in 628ms
+ GET /manifest.webmanifest 200 in 56ms
